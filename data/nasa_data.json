@@ -1,0 +1,187 @@
+{
+  "_meta": {
+    "compiled": "2026-11-14",
+    "note": "Curated archived dataset. Every value was read from the cited page on the compile date. Fields marked verified=false could not be confirmed from a fetched source and must not be presented as NASA data.",
+    "collection_limits": "api.nasa.gov DONKI endpoints returned client errors to the fetch tool; kauai.ccmc.gsfc.nasa.gov blocked FLR/GST/CME (robots) but returned SEP. Flare list therefore comes from SpaceWeatherLive (NOAA GOES data), cross-checked against one DONKI record and NASA SVS pages."
+  },
+  "space_weather": {
+    "period": "2024-05-01/2024-05-31",
+    "solar_energetic_particle_events": {
+      "source": "NASA CCMC DONKI",
+      "source_url": "https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/SEP?startDate=2024-05-01&endDate=2024-05-31",
+      "verified": true,
+      "events": [
+        {"id": "2024-05-09T13:59:00-SEP-001", "type": "SEP", "time": "2024-05-09T13:59Z", "instrument": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV"},
+        {"id": "2024-05-09T14:25:00-SEP-001", "type": "SEP", "time": "2024-05-09T14:25Z", "instrument": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV"},
+        {"id": "2024-05-10T12:59:00-SEP-001", "type": "SEP", "time": "2024-05-10T12:59Z", "instrument": "SOHO: COSTEP 15.8-39.8 MeV"},
+        {"id": "2024-05-10T13:02:00-SEP-001", "type": "SEP", "time": "2024-05-10T13:02Z", "instrument": "SOHO: COSTEP 28.2-50.1 MeV"},
+        {"id": "2024-05-10T13:35:00-SEP-001", "type": "SEP", "time": "2024-05-10T13:35Z", "instrument": "GOES-P: SEISS >10 MeV"},
+        {"id": "2024-05-10T14:50:00-SEP-001", "type": "SEP", "time": "2024-05-10T14:50Z", "instrument": "STEREO A: IMPACT 13-100 MeV"},
+        {"id": "2024-05-11T02:10:00-SEP-001", "type": "SEP", "time": "2024-05-11T02:10Z", "instrument": "GOES-P: SEISS >100 MeV"},
+        {"id": "2024-05-11T04:07:00-SEP-001", "type": "SEP", "time": "2024-05-11T04:07Z", "instrument": "STEREO A: IMPACT 13-100 MeV"},
+        {"id": "2024-05-13T12:44:00-SEP-001", "type": "SEP", "time": "2024-05-13T12:44Z", "instrument": "STEREO A: IMPACT 13-100 MeV"},
+        {"id": "2024-05-13T13:10:00-SEP-001", "type": "SEP", "time": "2024-05-13T13:10Z", "instrument": "MODEL: REleASE:SOHO/EPHIN 15.8-39.8 MeV"},
+        {"id": "2024-05-13T14:00:00-SEP-001", "type": "SEP", "time": "2024-05-13T14:00Z", "instrument": "GOES-P: SEISS >10 MeV"},
+        {"id": "2024-05-13T16:19:00-SEP-001", "type": "SEP", "time": "2024-05-13T16:19Z", "instrument": "MODEL: REleASE:ACE/EPAM 15.8-39.8 MeV"},
+        {"id": "2024-05-13T18:07:00-SEP-001", "type": "SEP", "time": "2024-05-13T18:07Z", "instrument": "SOHO: COSTEP 15.8-39.8 MeV"},
+        {"id": "2024-05-13T18:07:00-SEP-002", "type": "SEP", "time": "2024-05-13T18:07Z", "instrument": "SOHO: COSTEP 28.2-50.1 MeV"}
+      ]
+    },
+    "solar_flares": {
+      "source": "SpaceWeatherLive top-50 flares of 2024 (NOAA GOES X-ray data); X-class only",
+      "source_url": "https://www.spaceweatherlive.com/en/solar-activity/top-50-solar-flares/year/2024.html",
+      "verified": true,
+      "caveats": [
+        "Not a NASA source, except the one record carrying donki_id.",
+        "Times are HH:MM, presumed UTC (the page table has no timezone label; the X8.7 times match the DONKI record exactly).",
+        "Class values use the rescaled GOES calibration, so they can differ slightly from DONKI/NASA (e.g. X8.79 here vs X8.7 in DONKI, X5.89 vs NASA X5.8).",
+        "Region numbers are NOAA short form: 3664 = AR 13664.",
+        "DONKI activity IDs were only verified for the X8.7 flare; others are null rather than guessed."
+      ],
+      "events": [
+        {"type": "FLR", "date": "2024-05-03", "start": "02:11", "peak": "02:22", "end": "02:27", "class": "X1.6",  "region": 3663, "donki_id": null},
+        {"type": "FLR", "date": "2024-05-05", "start": "05:47", "peak": "06:01", "end": "06:07", "class": "X1.32", "region": 3663, "donki_id": null},
+        {"type": "FLR", "date": "2024-05-05", "start": "11:41", "peak": "11:54", "end": "12:16", "class": "X1.2",  "region": 3663, "donki_id": null},
+        {"type": "FLR", "date": "2024-05-06", "start": "05:38", "peak": "06:35", "end": "06:47", "class": "X4.52", "region": 3663, "donki_id": null},
+        {"type": "FLR", "date": "2024-05-09", "start": "08:45", "peak": "09:13", "end": "09:36", "class": "X2.2",  "region": 3664, "donki_id": null},
+        {"type": "FLR", "date": "2024-05-09", "start": "17:23", "peak": "17:44", "end": "18:01", "class": "X1.1",  "region": 3664, "donki_id": null},
+        {"type": "FLR", "date": "2024-05-10", "start": "06:27", "peak": "06:54", "end": "07:06", "class": "X3.98", "region": 3664, "donki_id": null},
+        {"type": "FLR", "date": "2024-05-11", "start": "01:10", "peak": "01:23", "end": "01:39", "class": "X5.89", "region": 3664, "donki_id": null, "nasa_class": "X5.8", "nasa_note": "NASA: peaked 9:23 pm EDT May 10", "nasa_url": "https://svs.gsfc.nasa.gov/14589"},
+        {"type": "FLR", "date": "2024-05-11", "start": "11:15", "peak": "11:44", "end": "12:05", "class": "X1.54", "region": 3664, "donki_id": null, "nasa_class": "X1.5", "nasa_note": "NASA: peaked 7:44 am EDT May 11", "nasa_url": "https://svs.gsfc.nasa.gov/14589"},
+        {"type": "FLR", "date": "2024-05-12", "start": "16:11", "peak": "16:26", "end": "16:38", "class": "X1.02", "region": 3664, "donki_id": null},
+        {"type": "FLR", "date": "2024-05-14", "start": "02:03", "peak": "02:09", "end": "02:19", "class": "X1.72", "region": 3664, "donki_id": null, "nasa_class": "X1.7", "nasa_note": "NASA: peaked 10:09 pm EDT May 13", "nasa_url": "https://svs.gsfc.nasa.gov/14589"},
+        {"type": "FLR", "date": "2024-05-14", "start": "12:40", "peak": "12:55", "end": "13:05", "class": "X1.2",  "region": 3664, "donki_id": null, "nasa_class": "X1.2", "nasa_note": "NASA: peaked 8:55 am EDT May 14", "nasa_url": "https://svs.gsfc.nasa.gov/14589"},
+        {"type": "FLR", "date": "2024-05-14", "start": "16:46", "peak": "16:51", "end": "17:02", "class": "X8.79", "region": 3664, "donki_id": "2024-05-14T16:46:00-FLR-001", "nasa_class": "X8.7", "donki_source_location": "S19W90", "donki_active_region": 13664, "donki_linked": ["2024-05-14T17:00:00-CME-001"], "nasa_note": "Largest flare of Solar Cycle 25 at the time", "nasa_url": "https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/FLR/30849/-1"},
+        {"type": "FLR", "date": "2024-05-15", "start": "08:18", "peak": "08:37", "end": "08:52", "class": "X3.48", "region": 3664, "donki_id": null},
+        {"type": "FLR", "date": "2024-05-15", "start": "14:20", "peak": "14:38", "end": "14:51", "class": "X2.99", "region": 3685, "donki_id": null},
+        {"type": "FLR", "date": "2024-05-27", "start": "06:49", "peak": "07:08", "end": "07:25", "class": "X2.9",  "region": 3697, "donki_id": null},
+        {"type": "FLR", "date": "2024-05-29", "start": "14:11", "peak": "14:37", "end": "15:39", "class": "X1.45", "region": 3697, "donki_id": null},
+        {"type": "FLR", "date": "2024-05-31", "start": "21:52", "peak": "22:03", "end": "22:09", "class": "X1.18", "region": 3697, "donki_id": null}
+      ]
+    },
+    "coronal_mass_ejections": {
+      "verified_events": [
+        {"type": "CME", "id": "2024-05-14T17:00:00-CME-001", "note": "Linked to the X8.7 flare in DONKI; speed not retrieved", "source_url": "https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/FLR/30849/-1"}
+      ],
+      "summary": {"text": "At least seven CMEs from May 7-11, 2024, speeds up to 3 million mph, reaching Earth in waves starting May 10", "source_url": "https://science.nasa.gov/science-research/heliophysics/how-nasa-tracked-the-most-intense-solar-storm-in-decades", "verified": true},
+      "per_event_list_verified": false
+    },
+    "geomagnetic_storm": {
+      "summary": {"level": "G5", "date": "2024-05-10", "text": "Storm reached G5, the highest level on the geomagnetic storm scale, last seen in 2003; strongest auroras the night of May 10; aurora reported as low as 26 degrees magnetic latitude", "source_url": "https://science.nasa.gov/science-research/heliophysics/how-nasa-tracked-the-most-intense-solar-storm-in-decades", "verified": true},
+      "donki_gst_id": null,
+      "kp_index": null,
+      "unverified_note": "DONKI GST record (ID, Kp values, observed times) could not be retrieved. Kp is left null."
+    },
+    "mars_storm_2024_05_20": {
+      "flare_class_estimate": "X12 (estimated from Solar Orbiter data)",
+      "date": "2024-05-20",
+      "curiosity_rad_dose_micrograys": 8100,
+      "equivalent_chest_xrays": 30,
+      "notes": "Largest solar energetic particle event MAVEN had seen; Odyssey star camera knocked out, recovered within an hour",
+      "source_url": "https://www.jpl.nasa.gov/news/nasa-watches-mars-light-up-during-epic-solar-storm",
+      "read_from": "https://phys.org/news/2024-06-nasa-mars-epic-solar-storm.html",
+      "verified": true,
+      "verification_note": "Numbers read from the phys.org republication ('Provided by NASA'); the JPL URL is the original release but was not itself fetched."
+    }
+  },
+  "mars_radiation": {
+    "surface_dose_rate_mSv_per_day": 0.67,
+    "surface_period": "August 2012 to June 2013",
+    "cruise_dose_rate_mSv_per_day": 1.8,
+    "round_trip_transit_dose_Sv": 0.66,
+    "total_with_500_day_surface_stay_Sv": 1.0,
+    "radiation_type": "galactic cosmic ray (GCR) dose equivalent, measured by Curiosity RAD",
+    "sources": [
+      {"what": "0.67 surface, 1.8 cruise, 0.66 Sv transit, ~1 Sv total", "url": "https://www.swri.org/press-release/swri-scientists-publish-first-radiation-measurements-surface-mars", "publisher": "Southwest Research Institute (RAD instrument lead)"},
+      {"what": "1.8 mSv/day cruise; like a whole-body CT scan every five or six days", "url": "https://www.jpl.nasa.gov/news/data-from-nasa-rovers-voyage-to-mars-aids-planning/", "publisher": "NASA JPL"}
+    ],
+    "verified": true,
+    "verification_note": "The 0.67 mSv/day surface figure was confirmed on the SwRI page only; no NASA/JPL page stating it was fetched."
+  },
+  "comm_delay": {
+    "one_way_min_minutes": 4,
+    "one_way_max_minutes": 24,
+    "min_distance_million_miles": 35,
+    "max_distance_million_miles": 250,
+    "source_url": "https://www.nasa.gov/centers-and-facilities/goddard/space-communications-7-things-you-need-to-know/",
+    "verified": true
+  },
+  "moxie": {
+    "peak_rate_grams_per_hour": 12,
+    "purity_percent_min": 98,
+    "total_oxygen_grams": 122,
+    "runs": 16,
+    "final_run_grams": 9.8,
+    "final_run_date": "August 7 (2023)",
+    "original_goal_grams_per_hour": 6,
+    "original_goal_note": "Inferred: article says the peak was twice NASA's original goals; 6 g/h is not stated literally",
+    "source_url": "https://www.jpl.nasa.gov/news/nasas-oxygen-generating-experiment-moxie-completes-mars-mission/",
+    "verified": true
+  },
+  "mars_day": {
+    "rotation_hours": 24.6,
+    "year_sols": 669.6,
+    "year_earth_days": 687,
+    "sunlight_travel_minutes": 13,
+    "temp_high_C": 20,
+    "temp_low_C": -153,
+    "avg_distance_from_sun_million_km": 228,
+    "source_url": "https://science.nasa.gov/mars/facts/",
+    "verified": true,
+    "sol_length_hms": "24h 39m 35s",
+    "sol_length_hms_verified": false,
+    "sol_length_note": "Widely quoted mean solar day figure; not confirmed on a fetched NASA page. Candidate source, not fetched: https://www.giss.nasa.gov/tools/mars24/help/notes.html"
+  },
+  "dust_storm": {
+    "event": "2018 planet-encircling dust storm, Opportunity rover",
+    "tau_normal": 0.5,
+    "tau_peak_measured": 10.8,
+    "tau_peak_date": "2018-06-10",
+    "tau_2007_storm": "above 5.5",
+    "tau_needed_to_recharge": "less than 2.0",
+    "storm_first_detected": "2018-05-30",
+    "area_km2_june_8": 18000000,
+    "area_km2_june_12": 35000000,
+    "area_note": "35 million km2 is about a quarter of the planet",
+    "last_contact": "2018-06-10",
+    "rover_temp_C_june_10": -29,
+    "battery_note": "Team assumed battery charge dipped below 24 volts",
+    "sources": [
+      "https://www.jpl.nasa.gov/news/opportunity-hunkers-down-during-dust-storm/",
+      "https://www.jpl.nasa.gov/news/six-things-about-opportunitys-recovery-efforts/"
+    ],
+    "verified": true,
+    "power_watt_hours_before": null,
+    "power_watt_hours_during": null,
+    "power_verified": false,
+    "power_note": "Watt-hour figures (commonly reported as roughly 645 Wh dropping to 22 Wh) were NOT found on any fetched NASA page. Do not present as NASA data. A game can derive sunlight loss from tau instead."
+  },
+  "astronaut_health": [
+    {
+      "finding": "Weight-bearing bones lose on average 1% to 1.5% of mineral density per month during 4-6 month missions",
+      "value_min_percent_per_month": 1.0,
+      "value_max_percent_per_month": 1.5,
+      "caveat": "NASA says more research is needed on whether this rate continues on longer missions",
+      "source_url": "https://www.nasa.gov/reference/risk-of-spaceflight-induced-bone-changes/",
+      "verified": true
+    },
+    {
+      "finding": "Astronauts can grow taller in space by as much as 3% as the spine straightens and elongates",
+      "value_max_percent": 3,
+      "source_url": "https://www.nasa.gov/reference/risk-of-spaceflight-induced-bone-changes/",
+      "verified": true
+    }
+  ],
+  "api_nasa_gov": {
+    "cors_documented": false,
+    "cors_note": "Neither https://api.nasa.gov/ nor the api.data.gov developer manual mentions CORS or browser use. Actual response headers could not be inspected (shell network blocked; fetch tool got client errors). Treat live browser calls as untested and ship this archived file as the primary data path.",
+    "demo_key_hourly_limit": 30,
+    "demo_key_daily_limit": 50,
+    "limit_scope": "per IP address",
+    "sources": [
+      "https://api.nasa.gov/assets/html/authentication.html",
+      "https://api.data.gov/docs/developer-manual"
+    ],
+    "verified": true
+  }
+}
